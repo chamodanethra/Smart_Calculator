@@ -81,7 +81,6 @@ private fun evaluateExpression(exp: String, variables: Map<String, BigInteger>):
     val matchExp2 = """.*\.(-?\w+) */ *(-?\w+).*""".toRegex()
     modExp = replaceMatch(modExp, variables, matchExp1)
     modExp = replaceMatch(modExp, variables, matchExp2)
-    println(modExp)
     return modExp.trimStart('.').split(".").sumOf {
         if (it in listOf("-", "")) throw Exception()
         if (it.contains("\\d+".toRegex())) it.toBigInteger()
