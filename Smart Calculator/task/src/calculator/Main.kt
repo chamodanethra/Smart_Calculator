@@ -5,7 +5,7 @@ import java.math.BigInteger
 fun main() {
     val variables = mutableMapOf<String, BigInteger>()
     while (true) {
-        val s = readln()
+        val s = readln() //eg: > 3 + 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1)
         if (s.isEmpty()) continue
         try {
             if (s.contains('=') || s.startsWith('/')) {
